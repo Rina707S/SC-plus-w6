@@ -1,0 +1,59 @@
+body {
+  font-family: Papyrus;
+  color: blueviolet;
+}
+.weatherapp {
+  background: #e0edf8;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  list-style: none;
+}
+
+.weatherapp {
+  border: 5px solid #5ac2f0;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+.clearfix {
+  float: left;
+}
+.temp {
+  font-size: 50px;
+}
+
+.weather-icon {
+  height: 70px;
+  font-weight: 70px;
+  margin-right: 10px;
+  float: left;
+}
+
+.units {
+  position: relative;
+  top: -20px;
+}
+
+.try {
+  background-color: #ebf7fd;
+}
+.week {
+  text-align: center;
+}
+.temperature {
+  text-align: center;
+}
