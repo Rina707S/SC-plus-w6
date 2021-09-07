@@ -57,3 +57,9 @@ li {
 .temperature {
   text-align: center;
 }
+
+.copyright {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
