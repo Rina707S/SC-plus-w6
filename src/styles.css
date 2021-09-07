@@ -1,9 +1,13 @@
 body {
   font-family: Papyrus;
   color: blueviolet;
+  background: linear-gradient(142.4deg, rgb(139, 98, 208) 5%, rgb(126, 124, 223) 28.2%, rgb(109, 207, 236) 62.5%, rgb(176, 239, 244) 89.1%);
 }
+
 .weatherapp {
-  background: #e0edf8;
+  background: radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
+  box-shadow: 10px 10px 20px rgba(110, 45, 200, 0.2);
+
 }
 
 h1 {
