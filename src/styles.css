@@ -2,6 +2,8 @@ body {
   font-family: Papyrus;
   color: blueviolet;
   background: linear-gradient(142.4deg, rgb(139, 98, 208) 5%, rgb(126, 124, 223) 28.2%, rgb(109, 207, 236) 62.5%, rgb(176, 239, 244) 89.1%);
+  background-image: url("https://img.wallpapersafari.com/desktop/1680/1050/43/78/0oaFZK.jpg");
+  background-attachment: fixed;
 }
 
 .weatherapp {
@@ -30,7 +32,7 @@ li {
   border: 5px solid #5ac2f0;
   border-radius: 20px;
   padding: 20px;
-  margin: 20px auto;
+  margin: 120px auto 0;
   max-width: 600px;
 }
 .clearfix {
