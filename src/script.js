@@ -1,27 +1,25 @@
-let today = document.querySelector("#date");
-let now = new Date();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tyuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-let hour = now.getHours();
-let minutes = now.getMinutes();
-if (hour < 10) {
-  hour = `0${hour}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tyuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hour}:${minutes}`;
 }
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-today.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -31,7 +29,12 @@ function displayWeather(response) {
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function search(city) {
