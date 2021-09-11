@@ -86,6 +86,7 @@ li {
 .weather-temperature .active {
   color: blueviolet;
   cursor: default;
+  font-weight: bold;
 }
 
 a {
