@@ -43,7 +43,7 @@ function displayWeather(response) {
     );
   document
     .querySelector("#icon")
-    .setAttribute("src", response.data.weather[0].description);
+    .setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
 }
