@@ -44,6 +44,8 @@ function displayWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("src", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -71,10 +73,36 @@ function city(event) {
   let city = document.querySelector("#search-city").value;
   search(city);
 }
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", city);
 
 let currentLocationButton = document.querySelector("#where-button");
 currentLocationButton.addEventListener("click", whereAreYou);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 
 search("Tokyo");

@@ -82,3 +82,20 @@ li {
   margin: 0 auto;
   text-align: center;
 }
+
+.weather-temperature .active {
+  color: blueviolet;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
