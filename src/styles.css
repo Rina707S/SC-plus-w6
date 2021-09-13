@@ -100,3 +100,12 @@ a:hover {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-min {
+  opacity: 0.5;
+}
